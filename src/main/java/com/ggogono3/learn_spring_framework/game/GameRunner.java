@@ -1,9 +1,9 @@
 package com.ggogono3.learn_spring_framework.game;
 
 public class GameRunner {
-	private MarioGame _game;
-	public GameRunner(MarioGame marioGame) {
-		this._game = marioGame;
+	private IGamingConsole _game;
+	public GameRunner(IGamingConsole game) {
+		this._game = game;
 	}
 
 	public void run() {

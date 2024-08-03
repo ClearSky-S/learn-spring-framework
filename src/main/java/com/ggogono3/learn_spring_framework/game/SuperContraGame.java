@@ -1,6 +1,6 @@
 package com.ggogono3.learn_spring_framework.game;
 
-public class MarioGame implements IGamingConsole {
+public class SuperContraGame implements IGamingConsole {
 	public void up() {
 		System.out.println("Jump");
 	}
