@@ -6,11 +6,12 @@ import com.ggogono3.learn_spring_framework.game.GameRunner;
 import com.ggogono3.learn_spring_framework.game.IGamingConsole;
 import com.ggogono3.learn_spring_framework.game.MarioGame;
 
-public class App02HelloWorldSpring {
+public class App03GamingSpringBeans {
 
 	public static void main(String[] args) {
-		var context = new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
-		System.out.println(context.getBean("name"));
+		try (var context = new AnnotationConfigApplicationContext(GamingConfiguration.class)) {
+			var gameRunner = context.getBean(GameRunner.class);
+			gameRunner.run();
+		}
 	}
-
 }
